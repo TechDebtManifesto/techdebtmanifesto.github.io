@@ -1,0 +1,195 @@
+/* Basic, clean layout suitable for a manifesto page */
+:root {
+  /* Default to light mode */
+  --bg: #ffffff;
+  --panel: #f8fafc; /* slate-50 */
+  --text: #0f172a;  /* slate-900 */
+  --muted: #475569; /* slate-600 */
+  --accent: #2563eb; /* blue-600 */
+  --border: #e5e7eb; /* gray-200 */
+  --button-bg: #f3f4f6; /* gray-100 */
+  --button-text: #0f172a;
+  --button-border: #d1d5db; /* gray-300 */
+  --button-hover-border: #9ca3af; /* gray-400 */
+
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0c0f;
+    --panel: #12151a;
+    --text: #e7edf3;
+    --muted: #aab4bf;
+    --accent: #4da3ff;
+    --border: #1d222b;
+    --button-bg: #0f1320;
+    --button-text: #e7edf3;
+    --button-border: #1d222b;
+    --button-hover-border: #21314a;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.6;
+}
+
+.site-header {
+  padding: 2rem 1rem 1rem;
+  text-align: center;
+}
+
+.top-link {
+  text-align: center;
+  padding: 1rem 1rem 0;
+  margin: 0;
+}
+.top-link a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+.top-link a:hover {
+  text-decoration: underline;
+}
+.site-header h1 {
+  margin: 0 0 0.25rem 0;
+  font-weight: 700;
+}
+.tagline {
+  color: var(--muted);
+  margin: 0;
+}
+
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem 4rem;
+}
+
+.paragraph {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 0;
+}
+.paragraph h2 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+.paragraph p {
+  margin: 0.5rem 0 0.75rem 0;
+  font-size: 1.05rem;
+}
+
+.paragraph-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.footnotes {
+  border-top: 1px solid #888; /* thin line */
+  margin-top: 2em;
+  padding-top: 0.5em;
+  font-size: 0.9em;
+}
+
+.footnotes li {
+  list-style: none; /* remove bullet */
+  margin-left: 0;
+}
+
+.footnotes li::marker {
+  content: none; /* ensure no default numbering */
+}
+
+.footnote-number {
+  vertical-align: super;
+  font-size: 0.7em;
+  margin-right: 0.3em;
+}
+
+.references {
+  list-style: none;
+  padding-left: 0;
+  font-size: 0.75em !important;
+}
+
+.discuss-btn, .close-comments-btn {
+  appearance: none;
+  border: 1px solid var(--button-border);
+  background: var(--button-bg);
+  color: var(--button-text);
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+.discuss-btn:hover, .close-comments-btn:hover {
+  border-color: var(--button-hover-border);
+}
+
+.comments-slot {
+  margin-top: 0.75rem;
+  border-top: 1px dashed var(--border);
+  padding-top: 0.75rem;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  text-align: center;
+  padding: 1rem;
+}
+.site-footer a { color: var(--accent); }
+
+/* Segmented control */
+.segmented-wrap {
+  display: flex;
+  justify-content: center;
+}
+.segmented {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  padding: 0.25rem;
+  margin: 0.5rem 0 1rem 0;
+}
+.segment {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  padding: 0.5rem 0.9rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.segment:is(.is-active, [aria-selected="true"]) {
+  background: var(--bg);
+  color: var(--accent);
+  box-shadow: 0 0 0 1px var(--border) inset;
+}
+.segment:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.panels { margin-top: 0.5rem; }
+.panel[hidden] { display: none; }
