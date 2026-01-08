@@ -1,7 +1,6 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const url = require('url');
 
 const build = require('./build');
 
@@ -22,8 +21,8 @@ const MIME_BY_EXT = {
 };
 
 function safePathFromUrl(requestUrl) {
-  const { pathname } = url.parse(requestUrl);
-  const decoded = decodeURIComponent(pathname || '/');
+  const parsedUrl = new URL(requestUrl, 'http://localhost');
+  const decoded = decodeURIComponent(parsedUrl.pathname || '/');
   const normalized = path.posix.normalize(decoded);
   const stripped = normalized.replace(/^(\.\.(\/|\\|$))+/, '');
   return stripped === '/' ? '/index.html' : stripped;
@@ -70,9 +69,10 @@ async function main() {
     }
 
     const requestPath = safePathFromUrl(req.url);
-    const diskPath = path.join(ROOT, requestPath);
+    const diskPath = path.resolve(ROOT, `.${requestPath}`);
+    const rootPath = path.resolve(ROOT);
 
-    if (!diskPath.startsWith(ROOT)) {
+    if (diskPath !== rootPath && !diskPath.startsWith(`${rootPath}${path.sep}`)) {
       res.statusCode = 403;
       res.end('Forbidden');
       return;
