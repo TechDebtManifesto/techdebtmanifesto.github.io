@@ -1,0 +1,27 @@
+{
+  "name": "techdebtmanifesto.github.io",
+  "version": "1.0.0",
+  "description": "Live site: [techdebtmanifesto.github.io](https://techdebtmanifesto.github.io/)",
+  "main": "script.js",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node dev.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TechDebtManifesto/techdebtmanifesto.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/TechDebtManifesto/techdebtmanifesto.github.io/issues"
+  },
+  "homepage": "https://github.com/TechDebtManifesto/techdebtmanifesto.github.io#readme",
+  "devDependencies": {
+    "posthtml": "^0.16.7",
+    "posthtml-include": "^2.0.1"
+  }
+}
