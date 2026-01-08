@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Tech Debt Manifesto</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  
+  <header class="site-header">
+    <h1>Tech Debt Manifesto</h1>
+    <p class="tagline">Manifesto from Dagstuhl Perspectives Workshop 24452 -- Reframing Technical Debt -- <a target="_blank" href="https://arxiv.org/abs/2505.13009">Link to Paper</a></p>
+
+    <p class="top-link">From <a href="https://www.dagstuhl.de/24452" target="_blank" rel="noreferrer noopener">Dagstuhl Perspectives Workshop 24452</a></p>
+  </header>
+  
+
+  <main class="content" id="content">
+    <include src="_includes/guiding-statements-overall.html"></include>
+
+    <!-- Segmented control to switch between lists -->
+    <div class="segmented-wrap">
+      <nav class="segmented" role="tablist" aria-label="Manifesto sections">
+        <button class="segment is-active" id="tab-values" role="tab" aria-selected="true" aria-controls="panel-values">Values</button>
+        <button class="segment" id="tab-beliefs" role="tab" aria-selected="false" aria-controls="panel-beliefs">Beliefs</button>
+        <button class="segment" id="tab-principles" role="tab" aria-selected="false" aria-controls="panel-principles">Principles</button>
+      </nav>
+    </div>
+
+    <div class="panels">
+      <section id="panel-values" class="panel" role="tabpanel" aria-labelledby="tab-values">
+        <!-- Panel 1: Values -->
+        <include src="_includes/values-overall.html"></include>
+        <include src="_includes/value-1.html"></include>
+        <include src="_includes/value-2.html"></include>
+        <include src="_includes/value-3.html"></include>
+        <include src="_includes/value-4.html"></include>
+        <include src="_includes/value-5.html"></include>
+      </section>
+
+      <!-- Panel 2: Beliefs -->
+      <section id="panel-beliefs" class="panel" role="tabpanel" aria-labelledby="tab-beliefs" hidden="">
+        <include src="_includes/beliefs-overall.html"></include>
+        <include src="_includes/belief-1.html"></include>
+        <include src="_includes/belief-2.html"></include>
+        <include src="_includes/belief-3.html"></include>
+        <include src="_includes/belief-4.html"></include>
+        <include src="_includes/belief-5.html"></include>
+      </section>
+
+      <!-- Panel 3: Principles -->
+      <section id="panel-principles" class="panel" role="tabpanel" aria-labelledby="tab-principles" hidden="">
+        <include src="_includes/principles-overall.html"></include>
+        <include src="_includes/principle-1.html"></include>
+        <include src="_includes/principle-2.html"></include>
+        <include src="_includes/principle-3.html"></include>
+        <include src="_includes/principle-4.html"></include>
+        <include src="_includes/principle-5.html"></include>
+        <include src="_includes/principle-6.html"></include>
+        <include src="_includes/principle-7.html"></include>
+        <include src="_includes/principle-8.html"></include>
+        <include src="_includes/principle-9.html"></include>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Comments are powered by <a href="https://utteranc.es/" target="_blank" rel="noreferrer noopener">Utterances</a>
+      and <a target="_blank" href="https://github.com/TechDebtManifesto/techdebtmanifesto.github.io/issues">GitHub Issues</a>.
+    </p>
+    <p class="contact">Contact: Paris Avgeriou &lt;<a href="mailto:p.avgeriou@rug.nl">p.avgeriou@rug.nl</a>&gt;</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
