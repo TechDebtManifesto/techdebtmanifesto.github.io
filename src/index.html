@@ -20,18 +20,27 @@
   
 
   <main class="content" id="content">
-    <include src="_includes/guiding-statements-overall.html"></include>
-
     <!-- Segmented control to switch between lists -->
     <div class="segmented-wrap">
       <nav class="segmented" role="tablist" aria-label="Manifesto sections">
+        <button class="segment" id="tab-sign" role="tab" aria-selected="false" aria-controls="panel-sign">Sign</button>
+        <button class="segment" id="tab-overall" role="tab" aria-selected="false" aria-controls="panel-overall">Overall</button>
         <button class="segment is-active" id="tab-values" role="tab" aria-selected="true" aria-controls="panel-values">Values</button>
         <button class="segment" id="tab-beliefs" role="tab" aria-selected="false" aria-controls="panel-beliefs">Beliefs</button>
         <button class="segment" id="tab-principles" role="tab" aria-selected="false" aria-controls="panel-principles">Principles</button>
+        <button class="segment" id="tab-meta" role="tab" aria-selected="false" aria-controls="panel-meta">Meta</button>
       </nav>
     </div>
 
     <div class="panels">
+      <section id="panel-sign" class="panel" role="tabpanel" aria-labelledby="tab-sign" hidden="">
+        <include src="_includes/sign-the-manifesto.html"></include>
+      </section>
+
+      <section id="panel-overall" class="panel" role="tabpanel" aria-labelledby="tab-overall" hidden="">
+        <include src="_includes/guiding-statements-overall.html"></include>
+      </section>
+
       <section id="panel-values" class="panel" role="tabpanel" aria-labelledby="tab-values">
         <!-- Panel 1: Values -->
         <include src="_includes/values-overall.html"></include>
@@ -64,6 +73,10 @@
         <include src="_includes/principle-7.html"></include>
         <include src="_includes/principle-8.html"></include>
         <include src="_includes/principle-9.html"></include>
+      </section>
+
+      <section id="panel-meta" class="panel" role="tabpanel" aria-labelledby="tab-meta" hidden="">
+        <include src="_includes/meta.html"></include>
       </section>
 
     </div>

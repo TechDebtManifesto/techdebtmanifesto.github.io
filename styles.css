@@ -164,6 +164,8 @@ html, body {
 .segmented {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 0.25rem;
   background: var(--panel);
   border: 1px solid var(--border);
