@@ -96,6 +96,28 @@ html, body {
   font-size: 1.05rem;
 }
 
+.paragraph blockquote,
+blockquote {
+  margin: 0.75rem 0;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid var(--accent);
+  background: color-mix(in srgb, var(--panel) 75%, var(--bg));
+  border-radius: 10px;
+}
+.paragraph blockquote p,
+blockquote p {
+  margin: 0;
+  font-size: 1.05rem;
+}
+.paragraph blockquote cite,
+blockquote cite {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-style: normal;
+  font-size: 0.95rem;
+}
+
 .paragraph-actions {
   display: flex;
   gap: 0.5rem;
@@ -133,14 +155,50 @@ html, body {
   margin: 0.5rem 0 0.75rem;
   padding-left: 1.25rem;
   columns: 2;
+  column-count: 2;
+  -webkit-columns: 2;
+  -webkit-column-count: 2;
   column-gap: 2rem;
+  -webkit-column-gap: 2rem;
 }
 .participants li {
   margin: 0.25rem 0;
   break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
 }
 @media (max-width: 700px) {
-  .participants { columns: 1; }
+  .participants {
+    columns: 1;
+    column-count: 1;
+    -webkit-columns: 1;
+    -webkit-column-count: 1;
+  }
+}
+
+.toc-list {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+  columns: 2;
+  column-count: 2;
+  -webkit-columns: 2;
+  -webkit-column-count: 2;
+  column-gap: 2rem;
+  -webkit-column-gap: 2rem;
+}
+.toc-list li {
+  margin: 0.25rem 0;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+}
+@media (max-width: 700px) {
+  .toc-list {
+    columns: 1;
+    column-count: 1;
+    -webkit-columns: 1;
+    -webkit-column-count: 1;
+  }
 }
 
 .discuss-btn, .close-comments-btn {

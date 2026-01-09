@@ -71,8 +71,8 @@
   <p>
     Use the tabs to browse, and use the “Discuss” buttons to open a GitHub-backed thread for that specific item.
   </p>
-  <p><quote>In software-intensive systems, <b>Technical Debt</b> is a collection of design or implementation constructs that are expedient in the short term but set up a technical context that can make future changes more costly or impossible. Technical Debt presents an actual or contingent
-liability whose impact is limited to internal system qualities, primarily maintainability and evolvability.</quote></p>
+  <p></p><blockquote>In software-intensive systems, <b>Technical Debt</b> is a collection of design or implementation constructs that are expedient in the short term but set up a technical context that can make future changes more costly or impossible. Technical Debt presents an actual or contingent
+liability whose impact is limited to internal system qualities, primarily maintainability and evolvability.</blockquote><p></p>
   <p>
 Technical Debt can be introduced across the software development lifecycle. Earlier lifecycle Technical Debt typically imposes broader impact on software systems as compared to Technical Debt introduced late in the development cycle. This manifesto includes all relevant artifacts and processes within a Software Engineering lifecycle: from requirements to design and implementation, to testing and continuous integration and continuous deployment (CI/CD), and during maintenance and evolution iterations. </p>
 
@@ -95,7 +95,18 @@ Technical Debt can be introduced across the software development lifecycle. Earl
 
       <section id="panel-values" class="panel" role="tabpanel" aria-labelledby="tab-values" hidden="">
         <!-- Panel 1: Values -->
-        <section class="paragraph" id="p1" data-paragraph="Value 1 – Psychological Safety & Trust">
+        <section class="paragraph toc" data-paragraph="TOC – Values">
+  <h2>Values — quick jump</h2>
+  <ul class="toc-list">
+    <li><a href="#values-v1">V1 — Psychological Safety &amp; Trust</a></li>
+    <li><a href="#values-v2">V2 — Actionable Communication</a></li>
+    <li><a href="#values-v3">V3 — Transparency &amp; Explainability</a></li>
+    <li><a href="#values-v4">V4 — Multi-Method Data Collection</a></li>
+    <li><a href="#values-v5">V5 — Team Architecture Understanding</a></li>
+  </ul>
+</section>
+
+        <section class="paragraph" id="values-v1" data-paragraph="Value 1 – Psychological Safety & Trust">
           <h2>V1 - We value psychological safety and trust between technical and business stakeholders for effective Technical Debt Management.</h2>
           <p>
             Psychological safety<span class="footnote-number">1</span> is essential for effective Technical Debt Management as it implies that there is no risk of retribution. Instead, people can talk openly about Technical Debt and how it was introduced without concern about negative career impact. Equally important is building trust between technical and business stakeholders: they both have legitimate concerns about the software being developed, and they need to mutually understand and respect these concerns by working together to address them. Accountability translates into appointing concrete roles to manage Technical Debt instead of blaming other stakeholders.
@@ -113,7 +124,8 @@ Technical Debt can be introduced across the software development lifecycle. Earl
           </div>
           <div class="comments-slot" aria-live="polite"></div>
         </section>
-        <section class="paragraph" id="p2" data-paragraph="Value 2 – Actionable Communication">
+
+        <section class="paragraph" id="values-v2" data-paragraph="Value 2 – Actionable Communication">
           <h2>V2 - We value simple, actionable, value-based communication of Technical Debt to all stakeholders over excessive, minute, overwhelming details.</h2>
           <p>
             When communicating Technical Debt information to the development team and even more so to management, clear communications and supporting information should be minimally complex and focus on actionable points. Although metrics, data, and trend plots have a role in effective Technical Debt Management, an overload of fragmented information may confuse rather than enable prioritized decision-making. Communication, especially with management, should also emphasize information that impacts business value more than any single metric or set of metrics. The key is not to over-simplify Technical Debt information, but instead to foster a practical and actionable Technical Debt Management approach that is clearly understood by developers and management.
@@ -123,7 +135,8 @@ Technical Debt can be introduced across the software development lifecycle. Earl
           </div>
           <div class="comments-slot" aria-live="polite"></div>
         </section>
-        <section class="paragraph" id="p3" data-paragraph="Value 3 – Transparency & Explainability">
+
+        <section class="paragraph" id="values-v3" data-paragraph="Value 3 – Transparency & Explainability">
           <h2>V3 - We value transparency, explainability, and replicability in the identification, measurement, and prioritization of Technical Debt.</h2>
           <p>
             The methods by which Technical Debt is identified, measured, and prioritized should not be obscured behind complicated tooling, esoteric rules, and undisclosed data sets. Instead, Technical Debt items should be traced to specific data sources, where measurement and prioritization rules should be open and explainable to all stakeholders.
@@ -133,7 +146,8 @@ Technical Debt can be introduced across the software development lifecycle. Earl
           </div>
           <div class="comments-slot" aria-live="polite"></div>
         </section>
-        <section class="paragraph" id="p4" data-paragraph="Value 4 – Multi-Method Data Collection">
+
+        <section class="paragraph" id="values-v4" data-paragraph="Value 4 – Multi-Method Data Collection">
           <h2>V4 - We value both objective and subjective data collection along with research methods to identify, measure, and prioritize Technical Debt over single-method approaches.</h2>
           <p>
             Technical Debt items may take many different forms, therefore, identifying and measuring them requires incorporating multiple mono- or inter-disciplinary approaches (<i>e.g.</i>, from economics or psychology), metrics, and benchmarks that might differ for each form of Technical Debt depending on the context. Relevant data may be of several different types, ranging from quantitative metrics to qualitative data (<i>e.g.</i>, open-ended survey responses and interviews that capture opinions on the severity/priority of Technical Debt items or the probability of specific components changing in the future).
@@ -143,7 +157,8 @@ Technical Debt can be introduced across the software development lifecycle. Earl
           </div>
           <div class="comments-slot" aria-live="polite"></div>
         </section>
-        <section class="paragraph" id="p5" data-paragraph="Value 5 – Team Architecture Understanding">
+
+        <section class="paragraph" id="values-v5" data-paragraph="Value 5 – Team Architecture Understanding">
           <h2>V5 - We value software architecture understanding across the team as part of effective Technical Debt Management.</h2>
           <p>
             A precondition to understanding Technical Debt items, their consequences, and the effects of repaying them is understanding the current architecture and how it has evolved over time. The entire team (developers, managers and other stakeholders) should share such an understanding to enable them to align and check the conformance of the architecture implementation. This should also occur in parallel with maintaining code quality, and it often results in improving it. Teams should consider architecture understanding as an essential part of development competency as well as a means to reason about business value and technical tradeoffs.
@@ -153,6 +168,7 @@ Technical Debt can be introduced across the software development lifecycle. Earl
           </div>
           <div class="comments-slot" aria-live="polite"></div>
         </section>
+
         <section class="paragraph" data-paragraph="Values – Overall">
           <h2>Discuss the values as a whole</h2>
           <p>
@@ -168,7 +184,18 @@ Technical Debt can be introduced across the software development lifecycle. Earl
 
       <!-- Panel 2: Beliefs -->
       <section id="panel-beliefs" class="panel" role="tabpanel" aria-labelledby="tab-beliefs" hidden="">
-        <section class="paragraph" id="p1" data-paragraph="Belief 1 – Continuous Management">
+        <section class="paragraph toc" data-paragraph="TOC – Beliefs">
+  <h2>Beliefs — quick jump</h2>
+  <ul class="toc-list">
+    <li><a href="#beliefs-b1">B1 — Continuous Management</a></li>
+    <li><a href="#beliefs-b2">B2 — Balanced Automation</a></li>
+    <li><a href="#beliefs-b3">B3 — AI-Aware Debt Management</a></li>
+    <li><a href="#beliefs-b4">B4 — Developer Insight Matters</a></li>
+    <li><a href="#beliefs-b5">B5 — Debt Subjectivity</a></li>
+  </ul>
+</section>
+
+        <section class="paragraph" id="beliefs-b1" data-paragraph="Belief 1 – Continuous Management">
           <h2>B1 - We believe that sustainable software delivery requires proactive and continuous Technical Debt Management.</h2>
           <p>
             Technical Debt Management is not a one-time activity but requires continuous effort. It is a culture that permeates the entire software development lifecycle and system evolution in terms of the application of processes and tools. Technical Debt Management is effective when it is explicitly and systematically recognized, valued, and rewarded, and is a part of ongoing resource planning activities.
@@ -178,7 +205,8 @@ Technical Debt can be introduced across the software development lifecycle. Earl
           </div>
           <div class="comments-slot" aria-live="polite"></div>
         </section>
-        <section class="paragraph" id="p2" data-paragraph="Belief 2 – Balanced Automation">
+
+        <section class="paragraph" id="beliefs-b2" data-paragraph="Belief 2 – Balanced Automation">
           <h2>B2 - We believe the most effective Technical Debt Management is as automatic as possible and as manual as needed.</h2>
           <p>
             We value Technical Debt Management automation to the greatest extent practicable, <i>e.g.</i>, as part of a general DevOps toolchain, continuously analyzing, measuring, and updating relevant data. Concurrently, we recognize the need for human-in-the-loop approaches, with human insights needed for data interpretation, integration, and decision-making based on the results of automated processes. Therefore, humans must perform manual supervision and intervention informed by (often informal) contextual factors that are essential to formulate effective actions supported by automation.
@@ -188,7 +216,8 @@ Technical Debt can be introduced across the software development lifecycle. Earl
           </div>
           <div class="comments-slot" aria-live="polite"></div>
         </section>
-        <section class="paragraph" id="p3" data-paragraph="Belief 3 – AI-Aware Debt Management">
+
+        <section class="paragraph" id="beliefs-b3" data-paragraph="Belief 3 – AI-Aware Debt Management">
           <h2>B3 - Technical Debt must be managed irrespective of how the software system is created, including generation of code and other artifacts by AI-assisted tools.</h2>
           <p>
             Evolving technologies, such as the emergence of AI-generated artifacts, will not eliminate the need for Technical Debt Management, although it may require adjustments to the process. One cannot assume that tool-generated implementation or design artifacts have no Technical Debt. The entire set of software development artifacts should be considered when evaluating and measuring Technical Debt.
@@ -198,7 +227,8 @@ Technical Debt can be introduced across the software development lifecycle. Earl
           </div>
           <div class="comments-slot" aria-live="polite"></div>
         </section>
-        <section class="paragraph" id="p4" data-paragraph="Belief 4 – Developer Insight Matters">
+
+        <section class="paragraph" id="beliefs-b4" data-paragraph="Belief 4 – Developer Insight Matters">
           <h2>B4 - We believe that items that developers observe as Technical Debt must be addressed, even when they are not supported by metrics.</h2>
           <p>
             Some Technical Debt is objectively identifiable and measurable, while other Technical Debt is subjectively identifiable (but its interest is still measurable). The two sets partially overlap, i.e., human perceptions of Technical Debt are not necessarily correlated to metrics and should be taken into account alongside metrics. Human perceptions should be prioritized and handled, <i>e.g.</i> contextual knowledge, such as inferior or outdated technology choices, is typically not reported in today’s Technical Debt metrics but is often well-understood by software developers. The inability to provide quantitative data on Technical Debt principal and interest must not impede steps toward refactoring based on well-known best practices. It can not unnecessarily lead to undue emphasis on polished code without addressing underlying issues or significantly improve development velocity.
@@ -208,7 +238,8 @@ Technical Debt can be introduced across the software development lifecycle. Earl
           </div>
           <div class="comments-slot" aria-live="polite"></div>
         </section>
-        <section class="paragraph" id="p5" data-paragraph="Belief 5 – Debt Subjectivity">
+
+        <section class="paragraph" id="beliefs-b5" data-paragraph="Belief 5 – Debt Subjectivity">
           <h2>B5 - We believe that not all issues identified by stakeholders or tools are Technical Debt.</h2>
           <p>
             We strongly caution against the over-use or misuse of the term Technical Debt. Not everything detrimental to a software engineering project is Technical Debt. We have observed that broad usage of the term Technical Debt for many kinds of problems in software development projects has led to confusion and has complicated constructive measures towards effective Technical Debt Management. Additionally, tools may identify violations or other issues that are not Technical Debt, for example, if they do not incur interest.
@@ -218,6 +249,7 @@ Technical Debt can be introduced across the software development lifecycle. Earl
           </div>
           <div class="comments-slot" aria-live="polite"></div>
         </section>
+
         <section class="paragraph" data-paragraph="Beliefs – Overall">
           <h2>Discuss the beliefs as a whole</h2>
           <p>
@@ -233,7 +265,22 @@ Technical Debt can be introduced across the software development lifecycle. Earl
 
       <!-- Panel 3: Principles -->
       <section id="panel-principles" class="panel" role="tabpanel" aria-labelledby="tab-principles" hidden="">
-        <section class="paragraph" id="p1" data-paragraph="Principle 1 – Shared Responsibility">
+        <section class="paragraph toc" data-paragraph="TOC – Principles">
+  <h2>Principles — quick jump</h2>
+  <ul class="toc-list">
+    <li><a href="#principles-p1">P1 — Shared Responsibility</a></li>
+    <li><a href="#principles-p2">P2 — Context Alignment</a></li>
+    <li><a href="#principles-p3">P3 — Comprehensive Data</a></li>
+    <li><a href="#principles-p4">P4 — Tailored Metrics</a></li>
+    <li><a href="#principles-p5">P5 — Integrated Toolchains</a></li>
+    <li><a href="#principles-p6">P6 — Debt Visibility</a></li>
+    <li><a href="#principles-p7">P7 — Architecture Focus</a></li>
+    <li><a href="#principles-p8">P8 — Purpose-Built Benchmarks</a></li>
+    <li><a href="#principles-p9">P9 — Intentional Tradeoffs</a></li>
+  </ul>
+</section>
+
+        <section class="paragraph" id="principles-p1" data-paragraph="Principle 1 – Shared Responsibility">
           <h2>P1 - Share Responsibility for Technical Debt Management.</h2>
           <p>
             We advocate for establishment of shared responsibility and mutual understanding among business and technical stakeholders. Although designated roles may oversee execution, both business and technical stakeholders should participate to define and execute the Technical Debt Management process, where they both share ownership. This is not a one-off activity but a process of continuous learning, evolution, and collaboration of the software stakeholder community in Technical Debt Management. Finally, designating champions for Technical Debt Management within software development teams is critical to fostering consistent and mutual understanding among stakeholders, raising awareness, promoting shared responsibility, and facilitating training.
@@ -243,7 +290,8 @@ Technical Debt can be introduced across the software development lifecycle. Earl
           </div>
           <div class="comments-slot" aria-live="polite"></div>
         </section>
-        <section class="paragraph" id="p2" data-paragraph="Principle 2 – Context Alignment">
+
+        <section class="paragraph" id="principles-p2" data-paragraph="Principle 2 – Context Alignment">
           <h2>P2 - Manage Technical Debt in Alignment with its Context.</h2>
           <p>
             Technical Debt is relevant only within a given context. Teams need to select metrics, collect data, and interpret them quantitatively and qualitatively with respect to that context. In particular, the relative value of eliminating Technical Debt (paying the principal now) versus investing elsewhere (while accepting current and future interest payments) is highly dependent on context (e.g., system size and age, criticality, business model, team distribution, governance, rate of change, impact on velocity, cost to fix). Context makes Technical Debt comparison across projects difficult, if not impossible.
@@ -253,7 +301,8 @@ Technical Debt can be introduced across the software development lifecycle. Earl
           </div>
           <div class="comments-slot" aria-live="polite"></div>
         </section>
-        <section class="paragraph" id="p3" data-paragraph="Principle 3 – Comprehensive Data">
+
+        <section class="paragraph" id="principles-p3" data-paragraph="Principle 3 – Comprehensive Data">
           <h2>P3 - Collect Comprehensive Data for Technical Debt Management.</h2>
           <p>
             An effective Technical Debt Management approach collects and triangulates data from multiple sources, including software engineering artifacts, processes, and people, and both qualitative and quantitative data sources. Teams need to collect data that span all activities, from identifying to monitoring Technical Debt, and go beyond what is convenient to collect. While static code analysis tools may seemingly offer a quick way to reveal Technical Debt, they provide a limited view and must be accompanied by a focus on architecture. Additional developer and management perspectives are required to review relevant contextual factors.
@@ -263,7 +312,8 @@ Technical Debt can be introduced across the software development lifecycle. Earl
           </div>
           <div class="comments-slot" aria-live="polite"></div>
         </section>
-        <section class="paragraph" id="p4" data-paragraph="Principle 4 – Tailored Metrics">
+
+        <section class="paragraph" id="principles-p4" data-paragraph="Principle 4 – Tailored Metrics">
           <h2>P4 - Avoid a One-Size-Fits-All Technical Debt Metric</h2>
           <p>
             Individual stakeholders require different Technical Debt metrics. Teams should opt for a set of carefully thought-out metrics over single, narrowly scoped, non-actionable metrics. The set of metrics should be re-evaluated and revised periodically to maintain alignment with trending data and mitigate concept drift. Reusable metrics should be properly validated against benchmarks, and against developer perceptions, for stability over time, and for generalizability across organizations.
@@ -273,7 +323,8 @@ Technical Debt can be introduced across the software development lifecycle. Earl
           </div>
           <div class="comments-slot" aria-live="polite"></div>
         </section>
-        <section class="paragraph" id="p5" data-paragraph="Principle 5 – Integrated Toolchains">
+
+        <section class="paragraph" id="principles-p5" data-paragraph="Principle 5 – Integrated Toolchains">
           <h2>P5 - Build Seamless and Integrated Technical Debt Management Toolchains with Human Oversight.</h2>
           <p>
             Software development teams need to select and build Technical Debt Management toolchains integrated within existing workflows, development tools, infrastructures, and processes. Tool vendors need to provide adequate support to achieve this level of integration. While integrated and automated approaches are desirable to avoid overburdening teams and to improve consistency, teams need to ensure a human is in the loop to interpret data, and make decisions (with minimal additional effort), as fully automated approaches at scale and level of correctness desired do not exist. To optimize human intervention, tools should be configurable to accommodate the needs of users with different levels of knowledge and experience.
@@ -283,7 +334,8 @@ Technical Debt can be introduced across the software development lifecycle. Earl
           </div>
           <div class="comments-slot" aria-live="polite"></div>
         </section>
-        <section class="paragraph" id="p6" data-paragraph="Principle 6 – Debt Visibility">
+
+        <section class="paragraph" id="principles-p6" data-paragraph="Principle 6 – Debt Visibility">
           <h2>P6 - Make Technical Debt Visible.</h2>
           <p>
             We advocate documenting both deliberate and inadvertent Technical Debt items, including the principal (cost to pay back), value (benefit of the decision), and interest (cost of change) of each item, to enhance transparency to both business and technical stakeholders. Recording the Technical Debt item cause and the respective decision on how to resolve that item enables effective Technical Debt Management. However, Technical Debt documentation must not lead to heavy-weight, bureaucratic practices that unnecessarily overburden developers; instead, it must focus on the most significant and impactful aspects, such as the root cause.
@@ -293,7 +345,8 @@ Technical Debt can be introduced across the software development lifecycle. Earl
           </div>
           <div class="comments-slot" aria-live="polite"></div>
         </section>
-        <section class="paragraph" id="p7" data-paragraph="Principle 7 – Architecture Focus">
+
+        <section class="paragraph" id="principles-p7" data-paragraph="Principle 7 – Architecture Focus">
           <h2>P7 - Elevate the Role of Architecture in Technical Debt Management.</h2>
           <p>
             Taking an architectural perspective (including a focus on business value) in Technical Debt Management significantly impacts identifying, resolving, and preventing Technical Debt compared to code or other artifacts. This impact is often underestimated. Tools and practices must consider architecture to balance the perspective on code.
@@ -303,7 +356,8 @@ Technical Debt can be introduced across the software development lifecycle. Earl
           </div>
           <div class="comments-slot" aria-live="polite"></div>
         </section>
-        <section class="paragraph" id="p8" data-paragraph="Principle 8 – Purpose-Built Benchmarks">
+
+        <section class="paragraph" id="principles-p8" data-paragraph="Principle 8 – Purpose-Built Benchmarks">
           <h2>P8 - Develop Fit-for-Purpose Technical Debt Benchmarks.</h2>
           <p>
             We consider that purpose-built Technical Debt benchmarks (i.e., standardized tests) are significantly distinct from classical static code analysis benchmarks. Such purpose-built Technical Debt benchmarks should not only focus on what can be easily extracted with current tools but also cover contextual factors as well as architectural concepts that are important for the identification and prioritization of Technical Debt. There is a benefit to defining different benchmarks for Technical Debt based on the purpose, such as governance, tool comparison, or application domains, the inclusion of diverse software artifacts, and a variety of development contexts. This will not only boost appropriate tool development, but it will also assist practitioners in adopting tools. 
@@ -313,7 +367,8 @@ Technical Debt can be introduced across the software development lifecycle. Earl
           </div>
           <div class="comments-slot" aria-live="polite"></div>
         </section>
-        <section class="paragraph" id="p9" data-paragraph="Principle 9 – Intentional Tradeoffs">
+
+        <section class="paragraph" id="principles-p9" data-paragraph="Principle 9 – Intentional Tradeoffs">
           <h2>P9 - Make Intentional Technical Debt Tradeoff Decisions.2</h2>
           <p>
             An effective Technical Debt Management approach bases the analysis of Technical Debt tradeoffs on data and transparent decision-making. All stakeholders must recognize that Technical Debt Management involves intentional compromise (e.g., prioritizing among features, defects, security vulnerabilities, and Technical Debt items). Especially at the moment that Technical Debt is incurred, the involved stakeholders should document the decision, the tradeoff and a remediation plan.
@@ -323,6 +378,7 @@ Technical Debt can be introduced across the software development lifecycle. Earl
           </div>
           <div class="comments-slot" aria-live="polite"></div>
         </section>
+
         <section class="paragraph" data-paragraph="Principles – Overall">
           <h2>Discuss the principles as a whole</h2>
           <p>
