@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="light dark">
   <title>Tech Debt Manifesto</title>
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -24,8 +25,8 @@
     <div class="segmented-wrap">
       <nav class="segmented" role="tablist" aria-label="Manifesto sections">
         <button class="segment" id="tab-sign" role="tab" aria-selected="false" aria-controls="panel-sign">Sign</button>
-        <button class="segment" id="tab-overall" role="tab" aria-selected="false" aria-controls="panel-overall">Overall</button>
-        <button class="segment is-active" id="tab-values" role="tab" aria-selected="true" aria-controls="panel-values">Values</button>
+        <button class="segment is-active" id="tab-overall" role="tab" aria-selected="true" aria-controls="panel-overall">Overall</button>
+        <button class="segment" id="tab-values" role="tab" aria-selected="false" aria-controls="panel-values">Values</button>
         <button class="segment" id="tab-beliefs" role="tab" aria-selected="false" aria-controls="panel-beliefs">Beliefs</button>
         <button class="segment" id="tab-principles" role="tab" aria-selected="false" aria-controls="panel-principles">Principles</button>
         <button class="segment" id="tab-meta" role="tab" aria-selected="false" aria-controls="panel-meta">Meta</button>
@@ -37,33 +38,33 @@
         <include src="_includes/sign-the-manifesto.html"></include>
       </section>
 
-      <section id="panel-overall" class="panel" role="tabpanel" aria-labelledby="tab-overall" hidden="">
+      <section id="panel-overall" class="panel" role="tabpanel" aria-labelledby="tab-overall">
+        <include src="_includes/overview.html"></include>
         <include src="_includes/guiding-statements-overall.html"></include>
       </section>
 
-      <section id="panel-values" class="panel" role="tabpanel" aria-labelledby="tab-values">
+      <section id="panel-values" class="panel" role="tabpanel" aria-labelledby="tab-values" hidden="">
         <!-- Panel 1: Values -->
-        <include src="_includes/values-overall.html"></include>
         <include src="_includes/value-1.html"></include>
         <include src="_includes/value-2.html"></include>
         <include src="_includes/value-3.html"></include>
         <include src="_includes/value-4.html"></include>
         <include src="_includes/value-5.html"></include>
+        <include src="_includes/values-overall.html"></include>
       </section>
 
       <!-- Panel 2: Beliefs -->
       <section id="panel-beliefs" class="panel" role="tabpanel" aria-labelledby="tab-beliefs" hidden="">
-        <include src="_includes/beliefs-overall.html"></include>
         <include src="_includes/belief-1.html"></include>
         <include src="_includes/belief-2.html"></include>
         <include src="_includes/belief-3.html"></include>
         <include src="_includes/belief-4.html"></include>
         <include src="_includes/belief-5.html"></include>
+        <include src="_includes/beliefs-overall.html"></include>
       </section>
 
       <!-- Panel 3: Principles -->
       <section id="panel-principles" class="panel" role="tabpanel" aria-labelledby="tab-principles" hidden="">
-        <include src="_includes/principles-overall.html"></include>
         <include src="_includes/principle-1.html"></include>
         <include src="_includes/principle-2.html"></include>
         <include src="_includes/principle-3.html"></include>
@@ -73,6 +74,7 @@
         <include src="_includes/principle-7.html"></include>
         <include src="_includes/principle-8.html"></include>
         <include src="_includes/principle-9.html"></include>
+        <include src="_includes/principles-overall.html"></include>
       </section>
 
       <section id="panel-meta" class="panel" role="tabpanel" aria-labelledby="tab-meta" hidden="">
@@ -86,6 +88,9 @@
     <p>
       Comments are powered by <a href="https://utteranc.es/" target="_blank" rel="noreferrer noopener">Utterances</a>
       and <a target="_blank" href="https://github.com/TechDebtManifesto/techdebtmanifesto.github.io/issues">GitHub Issues</a>.
+    </p>
+    <p>
+      Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noreferrer noopener">CC BY 4.0</a>.
     </p>
     <p class="contact">Contact: Paris Avgeriou &lt;<a href="mailto:p.avgeriou@rug.nl">p.avgeriou@rug.nl</a>&gt;</p>
   </footer>
