@@ -46,6 +46,47 @@ function loadCommentsForParagraph(paragraphNumber, slotEl) {
   s.async = true;
   slotEl.appendChild(s);
 }
+
+function linkifyPlainUrls(rootEl) {
+  const walker = document.createTreeWalker(rootEl, NodeFilter.SHOW_TEXT, {
+    acceptNode(node) {
+      const text = node.nodeValue || '';
+      if (!text.includes('http://') && !text.includes('https://')) return NodeFilter.FILTER_REJECT;
+      const parent = node.parentElement;
+      if (!parent) return NodeFilter.FILTER_REJECT;
+      if (parent.closest('a, script, style, textarea, code, pre')) return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    }
+  });
+
+  const urlRe = /(https?:\/\/[^\s<>()]+[^\s<>().,;:'")\]])/g;
+  const nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+
+  for (const textNode of nodes) {
+    const text = textNode.nodeValue || '';
+    const matches = [...text.matchAll(urlRe)];
+    if (!matches.length) continue;
+
+    const frag = document.createDocumentFragment();
+    let lastIdx = 0;
+    for (const match of matches) {
+      const url = match[0];
+      const idx = match.index ?? 0;
+      if (idx > lastIdx) frag.appendChild(document.createTextNode(text.slice(lastIdx, idx)));
+      const a = document.createElement('a');
+      a.href = url;
+      a.target = '_blank';
+      a.rel = 'noreferrer noopener';
+      a.textContent = url;
+      frag.appendChild(a);
+      lastIdx = idx + url.length;
+    }
+    if (lastIdx < text.length) frag.appendChild(document.createTextNode(text.slice(lastIdx)));
+
+    textNode.parentNode.replaceChild(frag, textNode);
+  }
+}
   
 function setupDiscussButtons() {
   document.querySelectorAll('.paragraph').forEach(section => {
@@ -56,8 +97,8 @@ function setupDiscussButtons() {
 
     btn.addEventListener('click', () => {
       loadCommentsForParagraph(n, slot);
-      // Scroll the comments into view for better UX
-      slot.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Keep the paragraph itself visible while opening comments
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
 }
@@ -86,6 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupDiscussButtons();
   watchThemeChanges();
   setupSegmentedPanels();
+  linkifyPlainUrls(document.body);
 });
 
 // Segmented controls: toggle panels visible/hidden and manage ARIA state
@@ -95,6 +137,14 @@ function setupSegmentedPanels() {
   const panels = new Map(
     tabs.map(t => [t.id, document.getElementById(t.getAttribute('aria-controls'))])
   );
+  const tabByHash = new Map([
+    ['#sign', 'tab-sign'],
+    ['#overall', 'tab-overall'],
+    ['#values', 'tab-values'],
+    ['#beliefs', 'tab-beliefs'],
+    ['#principles', 'tab-principles'],
+    ['#meta', 'tab-meta']
+  ]);
 
   function activate(tab) {
     tabs.forEach(btn => {
@@ -104,6 +154,14 @@ function setupSegmentedPanels() {
       const panel = panels.get(btn.id);
       if (panel) panel.hidden = !selected;
     });
+  }
+
+  function activateFromHash() {
+    const hash = (window.location.hash || '').toLowerCase();
+    const tabId = tabByHash.get(hash);
+    if (!tabId) return;
+    const tab = document.getElementById(tabId);
+    if (tab) activate(tab);
   }
 
   tabs.forEach((btn, idx) => {
@@ -131,4 +189,7 @@ function setupSegmentedPanels() {
       }
     });
   });
+
+  window.addEventListener('hashchange', activateFromHash);
+  activateFromHash();
 }

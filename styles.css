@@ -83,6 +83,7 @@ html, body {
   border-radius: 10px;
   padding: 1rem 1.25rem;
   margin: 1.25rem 0;
+  scroll-margin-top: 1rem;
 }
 .paragraph h2 {
   margin: 0 0 0.25rem 0;
@@ -126,6 +127,20 @@ html, body {
   list-style: none;
   padding-left: 0;
   font-size: 0.75em !important;
+}
+
+.participants {
+  margin: 0.5rem 0 0.75rem;
+  padding-left: 1.25rem;
+  columns: 2;
+  column-gap: 2rem;
+}
+.participants li {
+  margin: 0.25rem 0;
+  break-inside: avoid;
+}
+@media (max-width: 700px) {
+  .participants { columns: 1; }
 }
 
 .discuss-btn, .close-comments-btn {
@@ -182,6 +197,9 @@ html, body {
   border-radius: 9999px;
   cursor: pointer;
   font-weight: 600;
+}
+.segmented #tab-sign {
+  font-weight: 800;
 }
 .segment:is(.is-active, [aria-selected="true"]) {
   background: var(--bg);
