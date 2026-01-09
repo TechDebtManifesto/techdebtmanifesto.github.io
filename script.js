@@ -159,9 +159,27 @@ function setupSegmentedPanels() {
   function activateFromHash() {
     const hash = (window.location.hash || '').toLowerCase();
     const tabId = tabByHash.get(hash);
-    if (!tabId) return;
-    const tab = document.getElementById(tabId);
-    if (tab) activate(tab);
+    if (tabId) {
+      const tab = document.getElementById(tabId);
+      if (tab) activate(tab);
+      return;
+    }
+
+    if (hash.startsWith('#values-')) {
+      const tab = document.getElementById('tab-values');
+      if (tab) activate(tab);
+      return;
+    }
+    if (hash.startsWith('#beliefs-')) {
+      const tab = document.getElementById('tab-beliefs');
+      if (tab) activate(tab);
+      return;
+    }
+    if (hash.startsWith('#principles-')) {
+      const tab = document.getElementById('tab-principles');
+      if (tab) activate(tab);
+      return;
+    }
   }
 
   tabs.forEach((btn, idx) => {
